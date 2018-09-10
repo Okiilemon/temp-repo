@@ -28,10 +28,6 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use((req, res, next) => {
-    res.render('loading.hbs')
-})
-
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: '一起学Node',
@@ -42,6 +38,11 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.hbs')
 })
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs')
+})
+
 
 app.get('/bad', (req, res) => {
     res.send({
